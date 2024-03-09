@@ -31,21 +31,32 @@ const Home = () => {
     }
   };
 
+  const handleSubmit = (name)=>{
+    if (name.trim() !== '') {
+      fetchData(name);
+    } else {
+      // Handle the case where the input value is empty
+      alert('Input value is empty')
+      console.warn('Input value is empty');
+    }
+
+  }
+
   return (
-    <div style={{ display: "flex", justifyContent: 'center', flexDirection: 'column' }}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div className="Main-div">
+      <div className='second-div' >
         <h1 style={{}}>Name YourSelf</h1>
       </div>
       <br />
       <div>
-        <DynamicForm onSubmit={fetchData} />
+        <Form onSubmit={handleSubmit} />
       </div>
       <br />
-      {loading && <div style={{display:'flex', justifyContent:'center', color:"#2c5777", fontSize:18}}>
+      {loading && <div className="Loading">
         Loading...
         </div>}
       {result && (
-        <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignContent:'center',alignItems:'center'}}>
+        <div className="Result-Main" >
           <h2>Guess Results</h2>
           <label><b>Name : {result?.agify?.name}</b></label>
           <label><b>Age : {result?.agify?.age}</b></label>

@@ -149,3 +149,38 @@ a {
   box-shadow: none;
   color: #2c5777;
 }
+
+.Label{
+  font-size: 15; 
+  margin-Right:'5px';
+  color: #5d95c0;
+}
+.Input{
+  padding:4px;
+  border-color:#7aa7c7;
+  margin-bottom: 5px;
+  border-radius: 5;
+  box-shadow:#7aa7c7
+}
+.Loading{
+  display:flex;
+   justify-content:center;
+   color:#2c5777;
+  font-size:18px
+}
+.Result-Main{
+  display:flex; 
+  justify-content:center; 
+  flex-direction:column;
+   align-content:center;
+   align-items:center
+}
+.Main-div{
+  display: flex; 
+  justify-content: center; 
+  flex-direction: column
+}
+.second-div{
+  display: flex;
+   justify-content: center
+}
